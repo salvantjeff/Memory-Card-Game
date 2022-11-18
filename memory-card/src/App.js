@@ -3,6 +3,7 @@ import './App.css';
 import Card from "./Card";
 import Game from "./Game";
 import generateBuildOrder from "./generateBuildOrder";
+import Header from "./components/Header";
 
 const gameInit = new Game(0, 0);
 const cardDescriptions = ['first', 'second', 'third', 'fourth'];
@@ -25,8 +26,11 @@ function App() {
   const [game, setGame] = useState(gameInit);
 
   return (
-    <div className="App">
-
+    <div className="container">
+      <Header 
+        currentScore={game.currentScore}
+        highestScore={game.highestScore}
+      />
     </div>
   );
 }
