@@ -157,6 +157,9 @@ function App() {
       />
       <CardsBox 
         newCards={game.newCards} 
+        buildOrder={buildOrder}
+        handleClick={handleClick}
+        isDisabled={stopGame}
       />
       <Modal 
         modal={modal} 
