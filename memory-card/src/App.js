@@ -94,6 +94,14 @@ function App() {
     isGameOver();
   }, [game, buildOrder]);
 
+  useEffect(() => {
+    console.log(stopGame);
+    if (stopGame) {
+      toggleModal();
+      resetGame();
+    }
+  }, [stopGame]);
+  
   function resetCards() {
     const nextNewCards = {
       ...game.newCards
@@ -119,7 +127,7 @@ function App() {
     setGame(nextGame);
     setBuildOrder(initBuildOrder);
   }
-  
+
   function playAgain() {
     resetGame(); 
     toggleModal(); 
