@@ -9,4 +9,8 @@ export default class Game {
         this.currentScore = currentScore;
         this.highestScore = highestScore;
     }
+
+    addNewCard(card) {
+        this.newCards[card.id] = card;
+    }
 }
