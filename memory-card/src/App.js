@@ -50,7 +50,7 @@ function App() {
     }
     return total;
   }
-  
+
   function updateCurrentScore(newGame) {
     const nextGame = {
       ...newGame,
@@ -76,6 +76,23 @@ function App() {
     console.log('post total clicks --->',nextGame.newCards);
     updateCurrentScore(nextGame);
   }
+
+  useEffect(() => {
+    function isGameOver() {
+      let status = false;
+      for (let card of buildOrder) {
+        const current = game.newCards[card].totalClicks;
+        if (current === 0) {
+          status = true;
+        }
+      }
+  
+      if(status) {
+        setStopGame(true);
+      }
+    }
+    isGameOver();
+  }, [game, buildOrder]);
 
   return (
     <div className="container">
