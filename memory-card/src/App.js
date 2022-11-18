@@ -4,6 +4,7 @@ import Card from "./Card";
 import Game from "./Game";
 import generateBuildOrder from "./generateBuildOrder";
 import Header from "./components/Header";
+import CardsBox from "./components/CardsBox";
 
 const gameInit = new Game(0, 0);
 const cardDescriptions = ['first', 'second', 'third', 'fourth'];
@@ -30,6 +31,9 @@ function App() {
       <Header 
         currentScore={game.currentScore}
         highestScore={game.highestScore}
+      />
+      <CardsBox 
+        newCards={game.newCards} 
       />
     </div>
   );
