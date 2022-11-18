@@ -1,3 +1,4 @@
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import Card from "./Card";
 import Game from "./Game";
@@ -21,6 +22,8 @@ const initBuildOrder = generateBuildOrder(cardDescriptions.length);
 })(gameInit, Card, cardDescriptions, initBuildOrder);
 
 function App() {
+  const [game, setGame] = useState(gameInit);
+
   return (
     <div className="App">
 
