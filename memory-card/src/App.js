@@ -6,6 +6,7 @@ import generateBuildOrder from "./generateBuildOrder";
 import Header from "./components/Header";
 import CardsBox from "./components/CardsBox";
 import Modal from "./components/Modal/Modal";
+import shuffleCards from './shuffleCards';
 
 const gameInit = new Game(0, 0);
 const cardDescriptions = ['first', 'second', 'third', 'fourth'];
@@ -141,7 +142,7 @@ function App() {
     shuffleCards(nextBuildOrder);
     setBuildOrder(nextBuildOrder);
   }
-  
+
   function handleClick(cardId) {
     if (typeof cardId !== 'string') return;
     updateTotalClicks(cardId);
