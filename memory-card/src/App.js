@@ -40,6 +40,16 @@ function App() {
     document.body.classList.remove('active-modal');
   }
 
+  function updateCurrentScore(newGame) {
+    const nextGame = {
+      ...newGame,
+      currentScore: getCurrentScore(newGame),
+    };
+   
+    setGame(nextGame); 
+    console.log('post current score --->', nextGame.newCards);
+  }
+  
   function updateTotalClicks(cardId) {
     const nextGame = {
       ...game,
