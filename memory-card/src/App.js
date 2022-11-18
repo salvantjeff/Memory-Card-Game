@@ -5,6 +5,7 @@ import Game from "./Game";
 import generateBuildOrder from "./generateBuildOrder";
 import Header from "./components/Header";
 import CardsBox from "./components/CardsBox";
+import Modal from "./components/Modal/Modal";
 
 const gameInit = new Game(0, 0);
 const cardDescriptions = ['first', 'second', 'third', 'fourth'];
@@ -37,6 +38,12 @@ function App() {
       />
       <CardsBox 
         newCards={game.newCards} 
+      />
+      <Modal 
+        modal={modal} 
+        toggleModal={toggleModal} 
+        playAgain={playAgain}
+        setStopGame={setStopGame}
       />
     </div>
   );
