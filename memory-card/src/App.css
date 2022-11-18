@@ -34,3 +34,11 @@ header {
 .description-box.disabled {
   pointer-events: none;
 }
+
+/* Scoreboard */
+.scoreboard {
+  background-color: rgb(102, 150, 255);
+  padding: .5rem;
+  border-radius: .5rem;
+  width: 150px;
+}
