@@ -20,3 +20,17 @@ header {
   grid-template-rows: 1fr .25fr;
   gap: .5rem;
 }
+
+.img-frame {
+  background-color: aqua;
+  border-radius: .5rem;
+}
+
+.description-box {
+  text-align: center;
+  background-color: red;
+}
+
+.description-box.disabled {
+  pointer-events: none;
+}
