@@ -94,6 +94,13 @@ function App() {
     isGameOver();
   }, [game, buildOrder]);
 
+  function playAgain() {
+    resetGame(); 
+    toggleModal(); 
+    setStopGame(false); 
+    resetCards();
+  };
+
   return (
     <div className="container">
       <Header 
