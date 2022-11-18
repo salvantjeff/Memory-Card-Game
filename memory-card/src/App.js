@@ -135,6 +135,12 @@ function App() {
     resetCards();
   };
 
+  function handleClick(cardId) {
+    if (typeof cardId !== 'string') return;
+    updateTotalClicks(cardId);
+    runShuffleCards();
+  }
+  
   return (
     <div className="container">
       <Header 
