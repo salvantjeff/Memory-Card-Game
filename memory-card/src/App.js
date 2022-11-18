@@ -39,7 +39,23 @@ function App() {
   } else {
     document.body.classList.remove('active-modal');
   }
-  
+
+  function updateTotalClicks(cardId) {
+    const nextGame = {
+      ...game,
+      newCards: {
+        ...game.newCards,
+        [cardId]: {
+          ...game.newCards[cardId],
+          totalClicks: game.newCards[cardId].totalClicks - 1,
+        }
+      }
+    }
+    setGame(nextGame);
+    console.log('post total clicks --->',nextGame.newCards);
+    updateCurrentScore(nextGame);
+  }
+
   return (
     <div className="container">
       <Header 
