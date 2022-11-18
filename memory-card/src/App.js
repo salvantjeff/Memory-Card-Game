@@ -94,6 +94,22 @@ function App() {
     isGameOver();
   }, [game, buildOrder]);
 
+  function resetCards() {
+    const nextNewCards = {
+      ...game.newCards
+    }
+
+    for (let key in nextNewCards) {
+      const currentCard = nextNewCards[key];
+      currentCard.totalClicks = 2;
+    }
+                   
+    setGame({
+      ...game,
+      newCards: nextNewCards
+    });
+  }
+
   function playAgain() {
     resetGame(); 
     toggleModal(); 
