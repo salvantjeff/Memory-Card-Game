@@ -135,12 +135,19 @@ function App() {
     resetCards();
   };
 
+  function runShuffleCards() {
+    const nextBuildOrder = [...buildOrder];
+    console.log(nextBuildOrder);
+    shuffleCards(nextBuildOrder);
+    setBuildOrder(nextBuildOrder);
+  }
+  
   function handleClick(cardId) {
     if (typeof cardId !== 'string') return;
     updateTotalClicks(cardId);
     runShuffleCards();
   }
-  
+
   return (
     <div className="container">
       <Header 
