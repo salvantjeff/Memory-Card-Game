@@ -24,7 +24,10 @@ const initBuildOrder = generateBuildOrder(cardDescriptions.length);
 })(gameInit, Card, cardDescriptions, initBuildOrder);
 
 function App() {
+  const [stopGame, setStopGame] = useState(false);
   const [game, setGame] = useState(gameInit);
+  const [buildOrder, setBuildOrder] = useState(initBuildOrder);
+  const [modal, setModal] = useState(false);
 
   return (
     <div className="container">
