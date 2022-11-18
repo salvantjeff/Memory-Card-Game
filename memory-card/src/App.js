@@ -40,6 +40,17 @@ function App() {
     document.body.classList.remove('active-modal');
   }
 
+  function getCurrentScore(newGame) {
+    let total = 0;
+    for (let card of buildOrder) {
+      const current = newGame.newCards[card].totalClicks;
+      if (current < 2) {
+        total += 1;
+      }
+    }
+    return total;
+  }
+  
   function updateCurrentScore(newGame) {
     const nextGame = {
       ...newGame,
@@ -49,7 +60,7 @@ function App() {
     setGame(nextGame); 
     console.log('post current score --->', nextGame.newCards);
   }
-  
+
   function updateTotalClicks(cardId) {
     const nextGame = {
       ...game,
