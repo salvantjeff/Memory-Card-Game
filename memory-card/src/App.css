@@ -9,3 +9,14 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
+.card {
+  background-color: pink;
+  height: 250px;
+  width: 200px;
+  padding: .5rem;
+  border-radius: .5rem;
+  display: grid;
+  grid-template-rows: 1fr .25fr;
+  gap: .5rem;
+}
