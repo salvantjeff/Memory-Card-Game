@@ -110,6 +110,16 @@ function App() {
     });
   }
 
+  function resetGame() {
+    const nextGame = {
+      ...game,
+      currentScore: 0,
+      highestScore: Math.max(game.highestScore, game.currentScore)
+    }
+    setGame(nextGame);
+    setBuildOrder(initBuildOrder);
+  }
+  
   function playAgain() {
     resetGame(); 
     toggleModal(); 
