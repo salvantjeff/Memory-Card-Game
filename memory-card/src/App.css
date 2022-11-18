@@ -35,6 +35,15 @@ header {
   pointer-events: none;
 }
 
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background-color: rgb(123, 202, 113);
+  padding: 1rem;
+  gap: .5rem;
+}
+
 /* Scoreboard */
 .scoreboard {
   background-color: rgb(102, 150, 255);
