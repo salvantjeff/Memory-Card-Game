@@ -11,14 +11,19 @@ img {
   object-position: center;
 }
 
+body {
+  background-color: #222;
+}
+
 header {
   padding: 1rem;
   display: flex;
   justify-content: space-between;
+  background-color: white;
 }
 
 .card {
-  background-color: pink;
+  background-color: #ffc300;
   height: 250px;
   width: 200px;
   padding: .5rem;
@@ -29,7 +34,6 @@ header {
 }
 
 .img-frame {
-  background-color: aqua;
   border-radius: .5rem;
   overflow: hidden;
 }
@@ -47,14 +51,14 @@ header {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  background-color: rgb(123, 202, 113);
+  background-color: #222;
   padding: 1rem;
   gap: .5rem;
 }
 
 /* Scoreboard */
 .scoreboard {
-  background-color: rgb(102, 150, 255);
+  background-color: #ced4da;
   padding: .5rem;
   border-radius: .5rem;
   width: 150px;
