@@ -5,13 +5,13 @@ function CardsBox(props) {
     const cards = props.newCards;
     return (
         <div className="cards">
-            {props.buildOrder.map((c, i) => 
+            {props.buildOrder.map((c) => 
                 <div 
                     key={c} data-id={`${c}`} 
                     className="card"
                 >
                     <div className="img-frame" data-id={`${c}`}>
-                        <img src={images[i]} alt="#" data-id={`${c}`}/>
+                        <img src={images[c]} alt="#" data-id={`${c}`}/>
                     </div>
                     <div 
                         className={"description-box"} 
