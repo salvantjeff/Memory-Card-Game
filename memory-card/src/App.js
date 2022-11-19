@@ -30,7 +30,6 @@ function App() {
   const [game, setGame] = useState(gameInit);
   const [buildOrder, setBuildOrder] = useState(initBuildOrder);
   const [modal, setModal] = useState(false);
-
   const toggleModal = () => {
     setModal(!modal);
   }
