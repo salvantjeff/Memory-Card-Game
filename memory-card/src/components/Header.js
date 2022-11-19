@@ -5,7 +5,7 @@ export default function Header(props) {
     return (
         <header>
             <div className="title">
-                <h1>Memory Game</h1>
+                <h1>UFC Legends Memory Game</h1>
             </div>
             <ScoreBoard 
                 currentScore={props.currentScore}
