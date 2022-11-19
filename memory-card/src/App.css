@@ -22,6 +22,11 @@ header {
   background-color: white;
 }
 
+.title {
+  display: grid;
+  gap: 1rem;
+}
+
 .card {
   background-color: #ffc300;
   height: 250px;
@@ -69,4 +74,6 @@ header {
   padding: .5rem;
   border-radius: .5rem;
   width: 150px;
+  display: grid;
+  gap: .5rem;
 }
