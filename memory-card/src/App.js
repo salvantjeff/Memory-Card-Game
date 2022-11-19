@@ -7,10 +7,10 @@ import Header from "./components/Header";
 import CardsBox from "./components/CardsBox";
 import Modal from "./components/Modal/Modal";
 import shuffleCards from './shuffleCards';
+import cardDescriptions from './cardDescriptions';
 
 const gameInit = new Game(0, 0);
-const cardDescriptions = ['first', 'second', 'third', 'fourth'];
-const initBuildOrder = generateBuildOrder(cardDescriptions.length);
+const initBuildOrder = generateBuildOrder(cardDescriptions.list.length);
 
 (function initCards (
   currentGame, 
@@ -23,7 +23,7 @@ const initBuildOrder = generateBuildOrder(cardDescriptions.length);
       new someCard(currentBuildOrder[i], descriptions[i])
     )
   }
-})(gameInit, Card, cardDescriptions, initBuildOrder);
+})(gameInit, Card, cardDescriptions.list, initBuildOrder);
 
 function App() {
   const [stopGame, setStopGame] = useState(false);
