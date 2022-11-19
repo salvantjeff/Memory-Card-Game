@@ -1,16 +1,17 @@
 import React from "react";
+import images from "../images";
 
 function CardsBox(props) {
     const cards = props.newCards;
     return (
         <div className="cards">
-            {props.buildOrder.map(c => 
+            {props.buildOrder.map((c, i) => 
                 <div 
                     key={c} data-id={`${c}`} 
                     className="card"
                 >
                     <div className="img-frame" data-id={`${c}`}>
-                        <img src="#" alt="#" data-id={`${c}`}/>
+                        <img src={images[i]} alt="#" data-id={`${c}`}/>
                     </div>
                     <div 
                         className={"description-box"} 
